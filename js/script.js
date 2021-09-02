@@ -22,20 +22,26 @@ while(bombe.length <= 16){
 }
 var numeriGiocatore = [];
 
-document.getElementById("campo").addEventListener("click" , 
+document.getElementById("campo").addEventListener("click") , 
 function(event){
 
     let clickGiocatore = event.target.innerHTML;
+
     event.target.classList.add("cliccato");
-    if(numeriGiocatore.includes(event.target.innerHTML)){
+
+    if (numeriGiocatore.includes(event.target.innerHTML) )
+    {
         alert("Seleziona una casella che non hai precedentemente cliccato...");
-    } else {
+
+    } 
+    else {
     numeriGiocatore.push(event.target.innerHTML)
     }
-    for(i=1; i <= bombe.length; i++) {
-        if(clickutente == bombe[i]){
-            event.target.classList.add("nero");
-            alert("Hai totalizzato il punteggio di : " + (numeriGiocatore.length) + " Ricarica e prova a totalizzare il massimo del punteggio!");
+    for (i=1; i <= bombe.length; i++) {
+        
+        if(clickGiocatore == bombe[i]) {
+            event.target.classList.add("esploso");
+            alert("Hai totalizzato il punteggio di : " + (numeriGiocatore.length) + "Ricarica e prova a totalizzare il massimo del punteggio!");
         }
     }
 }
