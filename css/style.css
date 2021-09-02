@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#campo{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.quadrato{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+.quadrato.cliccato{
+    background-color: crimson;
+}
+.quadrato.esploso{
+    background-color: indigo;
+}
