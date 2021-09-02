@@ -22,7 +22,7 @@ while(bombe.length <= 16){
 }
 var numeriGiocatore = [];
 
-document.getElementById("campo").addEventListener("click") , 
+document.getElementById("campo").addEventListener("click" , 
 function(event){
 
     let clickGiocatore = event.target.innerHTML;
@@ -45,3 +45,4 @@ function(event){
         }
     }
 }
+);
