@@ -14,12 +14,14 @@ for ( var i=1; i <= numero ; i++){
 
 }
 var bombe = [];
-while(bombe.length <= 16){
+while(bombe.length < 16){
     var bombeR = numeroCasuale(1, numero);
     if(bombe.indexOf(bombeR) === -1){
         bombe.push(bombeR);
     } 
 }
+console.log(bombe);
+
 var numeriGiocatore = [];
 
 document.getElementById("campo").addEventListener("click" , 
@@ -41,8 +43,12 @@ function(event){
         
         if(clickGiocatore == bombe[i]) {
             event.target.classList.add("esploso");
-            alert("Hai totalizzato il punteggio di : " + (numeriGiocatore.length) + "Ricarica e prova a totalizzare il massimo del punteggio!");
+            alert("Hai totalizzato il punteggio di : " + (numeriGiocatore.length) + " , ricarica e prova a totalizzare il massimo del punteggio!");
+        }
+        if (numeriGiocatore.length == (numero) - 16){
+            alert( " Hai totalizzato il punteggio massimo, ricarica la pagina e continua a giocare!")
         }
     }
+    
 }
 );
